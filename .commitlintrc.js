@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     extends: ['@commitlint/config-conventional'], // 直接引入配置好的一个库，免得自己要一个一个定义
     rules: {
         'type-enum': [
@@ -27,7 +27,7 @@ module.exports = {
                         /^\[(build|feat|fix|update|refactor|docs|chore|style|revert|perf)].+/g.test(
                             raw
                         ),
-                        `commit备注信息格式错误，格式为 <[type] 修改内容>，type支持${types.join(',')}`
+                        `commit备注信息格式错误，格式为 <[type] 修改内容>，type支持`
                     ];
                 }
             }
